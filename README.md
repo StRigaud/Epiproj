@@ -1,5 +1,5 @@
 
-[![DOI](https://zenodo.org/badge/269663393.svg)](https://zenodo.org/badge/latestdoi/269663393)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3878789.svg)](https://doi.org/10.5281/zenodo.3878789)
 
 # Epiproj
 
@@ -128,11 +128,14 @@ The 2-steps approach allow then to project the raw signal with the local varianc
 
 ## How to cite 
 ``` 
-@ebook{rigaud2020,
-  author        = "{St\'ephane Rigaud}",
-  title         = "Epiproj : A multiscale epithelium projection filter.",
-  url           = "https://gitlab.pasteur.fr/iah/epiproj",
-  year          = "2015",
-  doi           = "10.5281/zenodo.3878722"
+@software{rigaud_stephane_2020_3878789,
+  author       = {Rigaud Stephane},
+  title        = {{Epiproj : A multiscale epithelium projection software}},
+  month        = jun,
+  year         = 2020,
+  publisher    = {Zenodo},
+  version      = {V2},
+  doi          = {10.5281/zenodo.3878789},
+  url          = {https://github.com/StRigaud/Epiproj.git}
 }
 ``` 
