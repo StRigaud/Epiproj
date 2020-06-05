@@ -130,6 +130,6 @@ The 2-steps approach allow then to project the raw signal with the local varianc
   title         = "Epiproj : A multiscale epithelium projection filter.",
   url           = "https://gitlab.pasteur.fr/iah/epiproj",
   year          = "2015",
-  doi           = 
+  doi           = "10.5281/zenodo.3878722"
 }
 ``` 
