@@ -1,3 +1,6 @@
+
+[![DOI](https://zenodo.org/badge/269663393.svg)](https://zenodo.org/badge/latestdoi/269663393)
+
 # Epiproj
 
 | Image  | Maxium Projection | Epiproj |
