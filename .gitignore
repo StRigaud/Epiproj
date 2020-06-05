@@ -1,0 +1,6 @@
+.vscode
+bin
+build
+.gitlab-ci.yml
+*.csv
+*.tif

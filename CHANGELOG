@@ -1,0 +1,19 @@
+2020-04-01 - v2.2
+- Update documentation
+
+2019-12-10 - v2.1
+- Bug correction in depthmap calculation, now output can be 2d or 3d.
+- Add 2 executable epiprojDepthMapGenerator and epiproDepthMapProjector
+
+2019-11-13 - v2
+- directory rework for beter clarity
+- filter renaming
+- code refactoring
+- bug correction: segfalt when input volume dimension was not a power of 2, now work on any image size
+- bug correction: output image can be the same dimension than input image
+- style: C++11
+- style: ITK v5
+- add: cmake unity test for each filters
+
+2017 - v1
+- private version
