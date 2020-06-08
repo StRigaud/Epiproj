@@ -19,7 +19,7 @@ The Epiproj is a 2-step approach for computing the depth image of the signal (ep
 
 ## Filters description
 
-All filters are higly inspired from the itkProjectionImageFilter from dimension managment and process threading. The core filter is the itkVolumeToDepthMapFilter which compute a DepthMap from a given Volume. The itkMultiscaleVolumeToDepthMapFilter integrate the itkVolumeToDepthMapFilter into a multiscale process to compute the depth map at each scale step of the volume using the depth map at the lower scale to initialise the current scale computation. Finaly the itkDepthMapProjectionFilter project a given volume using a given depth.
+All filters are higly inspired from the itkProjectionImageFilter for dimension managment and process threading. The core filter is the itkVolumeToDepthMapFilter which compute a DepthMap from a given Volume. The itkMultiscaleVolumeToDepthMapFilter integrate the itkVolumeToDepthMapFilter into a multiscale process to compute the depth map at each scale step of the volume using the depth map at the lower scale to initialise the current scale computation. Finaly the itkDepthMapProjectionFilter project a given volume using a given depth.
 
 ### itkVolumeToDepthMapFilter
 
