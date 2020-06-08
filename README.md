@@ -18,23 +18,25 @@ The Epiproj is a 2-step approach for computing the depth image of the signal (ep
 
 ## Filters description
 
+All filters are higly inspired from the itkProjectionImageFilter from dimension managment and process threading. The core filter is the itkVolumeToDepthMapFilter which compute a DepthMap from a given Volume. The itkMultiscaleVolumeToDepthMapFilter integrate the itkVolumeToDepthMapFilter into a multiscale process to compute the depth map at each scale step of the volume using the depth map at the lower scale to initialise the current scale computation. Finaly the itkDepthMapProjectionFilter project a given volume using a given depth.
+
 ### itkVolumeToDepthMapFilter
 
-ITK filter that take a nD image (optimised for 3D) and compute a depth map of the signal localisation as output.
-The signal localisation detection m_Peak can be define as:
+ITK filter that take a nD image (optimised for 3D, 4D+ was not evaluated) and compute a depth map of the signal localisation as output.
+The signal localisation detection **m_Peak** can be define as:
 
-- the maximum intensity along the projection dimension
-- the first relevant intensity peak along the projection dimension
+- the maximum intensity along the projection dimension (value = 0)
+- the first relevant intensity peak along the projection dimension (value = 1)
 
-The second definition require an additional value m_Tolerance to define the relevantness of the intensity
+The second definition require an additional value **m_Tolerance** to define the relevantness of the intensity
 Finaly, an initialisation depth map can be provided to speed up the computation.
 
-### itkMuliscaleVolumeToDepthMapFilter
+### itkMultiscaleVolumeToDepthMapFilter
 
-An extention of the itkVolumeToDepthMapFilter that use a multiscale pyramide to compute the depth map.
+An overlayer of the itkVolumeToDepthMapFilter that use a multiscale pyramide to compute the depth map.
 Here the filter first compute the map at the lower scale of the pyramide and use the output as initialisation
 for computing the map at the next scale level.
-For an optimised processing cost, it allows to compute a precise depth map of the signal localisation.
+THe multiscale approach allows a speed up of the process and is also used to controle the specificity of the process to small high scale structure such has small holes in the surface.
 
 ### itkDepthMapProjectionFilter
 
