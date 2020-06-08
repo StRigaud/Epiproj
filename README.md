@@ -61,7 +61,7 @@ provide a usable two-steps projection program.
 ### Install
 
 ```
-git clone git@gitlab.pasteur.fr:iah/epiproj.git  
+git clone https://github.com/StRigaud/Epiproj.git  
 mkdir epiproj/build  
 cd epiproj/build  
 ccmake -DCMAKE_BUILD_TYPE=Release ..  
@@ -69,7 +69,7 @@ make
 make test  
 ```
 
-All tests should pass, and corresponding executable can be found in "bin" folder at the root of the project.
+All tests should pass, and compiled executable can be found in "bin" folder at the root of the project.
 
 ### epiprojDepthMapGenerator
 
