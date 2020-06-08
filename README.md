@@ -131,7 +131,7 @@ The 2-steps approach allow then to project the raw signal with the local varianc
 
 ## How to cite 
 ``` 
-@software{rigaud_stephane_2020_3878789,
+@software{rigaud_2020,
   author       = {Rigaud Stephane},
   title        = {{Epiproj : A multiscale epithelium projection software}},
   month        = jun,
