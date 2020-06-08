@@ -1,4 +1,5 @@
 
+[![DOI](https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=shield)](https://github.com/StRigaud/Epiproj/blob/master/LICENSE)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3878789.svg)](https://doi.org/10.5281/zenodo.3878789)
 
 # Epiproj
