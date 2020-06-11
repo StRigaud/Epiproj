@@ -6,7 +6,9 @@
 
 | Image  | Maxium Projection | Epiproj |
 | :--------:  | :--------: | :--------: |
-| <img src="./documentation/C0T0.gif" width="200" height="200" /> | <img src="./documentation/C0T0_Max.png" width="200" height="200" /> | <img src="./documentation/C0T0_Proj.png" width="200" height="200" /> |
+| <img src="./documentation/C0T0-1.gif" width="300" height="300" /> | <img src="./documentation/C0T0_Max-1.png" width="300" height="300" /> | <img src="./documentation/C0T0_Proj-1.png" width="300" height="300" /> |
+
+<!-- <img src="./documentation/img21.gif" width="900" height="300" />  -->
 
 This is a set of three ITK based filters to compute the depth image of a surface in a volume and to project the surface along the depth axis.
 Those filters can be used independently or together. Here combined Epiproj - Epithelium Projection - to project in 2D an apical fluorescence signal of an epithelium.  
@@ -121,13 +123,14 @@ See filter **itkVolumeToDepthMapFilter** and **itkMuliscaleVolumeToDepthMapFilte
 
 ## Epiproj examples
 
-The depthmap can be compute on a pre-processed signal, like on the local variance filter response, or on the raw signal, depending on the data and signal inside.
-The 2-steps approach allow then to project the raw signal with the local variance depthmap for example.
+The depthmap can be compute on a pre-processed signal, this allows to apply specific filter that change the dinamic of the signal.
+The most common use is with the local variance for example. From the raw signal, we compute the local 2D variance that we use as input to compute the depthmap. The depthmap is then used to project the raw signal. Because we used the local variance filter, we remove any uniforme layer of signal allowing here to focus the depthmap on the cell signal.
 
 | Image  | Local Variance | Depth Map | Projection |
 | :--------:  | :--------: | :--------: | :--------: |
-| <img src="./documentation/C0T0.gif" width="200" height="200" /> | <img src="./documentation/C0T0_Var.gif" width="200" height="200" /> | <img src="./documentation/C0T0_Map.png" width="200" height="200" /> | <img src="./documentation/C0T0_Proj.png" width="200" height="200" /> |
+| <img src="./documentation/C0T0-1.gif" width="200" height="200" /> | <img src="./documentation/C0T0_Var-1.gif" width="200" height="200" /> | <img src="./documentation/C0T0_Map-1.png" width="200" height="200" /> | <img src="./documentation/C0T0_Proj-1.png" width="200" height="200" /> |
 
+<!-- <img src="./documentation/img11.gif" width="1200" height="300" />  -->
 
 ## How to cite 
 ``` 
