@@ -148,4 +148,4 @@ The most common use is with the local variance for example. From the raw signal,
 
 ## Acknowledgement
 
-This work was supported and highly tested by the [Polarity, Division, and Morphogenesis Team](https://science.institut-curie.org/research/biology-cancer-genetics-and-epigenetics/developmental-biology-and-genetics/team-bellaiche/) at Institut Curie, Paris, France.
+This work was supported and tested by the [Polarity, Division, and Morphogenesis Team](https://science.institut-curie.org/research/biology-cancer-genetics-and-epigenetics/developmental-biology-and-genetics/team-bellaiche/) at Institut Curie, Paris, France.
