@@ -70,7 +70,7 @@ int main(int argc, char **argv)
   const unsigned int Dimension = 3;
   using InputImageType = itk::Image<float, Dimension>;
   using InternatImageType = itk::Image<float, Dimension - 1>;
-  using OutputImageType = itk::Image<unsigned char, Dimension - 1>;
+  using OutputImageType = itk::Image<unsigned short, Dimension - 1>;
   using ImageReaderType = itk::ImageFileReader<InputImageType>;
   using DepthMapReaderType = itk::ImageFileReader<InternatImageType>;
   using ImageWriterType = itk::ImageFileWriter<OutputImageType>;

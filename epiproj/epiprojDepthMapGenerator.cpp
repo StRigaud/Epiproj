@@ -71,7 +71,7 @@ int main(int argc, char **argv)
   const unsigned int Dimension = 3;
   using InputImageType = itk::Image<float, Dimension>;
   using InternatImageType = itk::Image<float, Dimension - 1>;
-  using OutputImageType = itk::Image<unsigned char, Dimension - 1>;
+  using OutputImageType = itk::Image<unsigned short, Dimension - 1>;
   using ImageReaderType = itk::ImageFileReader<InputImageType>;
   using ImageWriterType = itk::ImageFileWriter<OutputImageType>;
   using VarianceImageFilterType = itk::VarianceImageFilter<InputImageType, InputImageType>;
@@ -137,9 +137,17 @@ int main(int argc, char **argv)
   depthMapFilter->SetSigma(delta);
   depthMapFilter->SetPeak(peak);
   depthMapFilter->SetTolerance(tolerance);
-  gaussianFilter->SetInput(depthMapFilter->GetOutput());
-  gaussianFilter->SetSigma(sigma);
-  castFilter->SetInput(gaussianFilter->GetOutput());
+
+  if (sigma >= 1)
+  {
+    gaussianFilter->SetInput(depthMapFilter->GetOutput());
+    gaussianFilter->SetSigma(sigma);
+    castFilter->SetInput(gaussianFilter->GetOutput());
+  }
+  else
+  {
+    castFilter->SetInput(depthMapFilter->GetOutput());
+  }
   writer->SetFileName(outputFileName);
   writer->SetInput(castFilter->GetOutput());
 
